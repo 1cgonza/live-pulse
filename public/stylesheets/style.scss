@@ -1,0 +1,98 @@
+body, html {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Poiret One', cursive;
+  color: #f2fafb;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgyPSIxIiB5Mj0iMSI+CjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMzYTcwNzYiPjwvc3RvcD4KPHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiM0ZDk2OWYiPjwvc3RvcD4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjM2E3MDc2Ij48L3N0b3A+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiPjwvcmVjdD4KPC9zdmc+");
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+input {
+  border: none;
+  background-color: rgba(255,255,255,0.5);
+  padding: 1em;
+  width: 100%;
+  font-size: 1.2em;
+  transition: 0.15s ease-in-out;
+
+  &:focus {
+    outline: none;
+    background-color: rgba(255,255,255,0.2);
+  }
+}
+
+button {
+  padding: 0.5em;
+  margin-right: 0.2em;
+  border: none;
+  background-color: #e5483c;
+  color: #fbe2e0;
+  font-size: 0.9em;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #c63e34;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.off {
+    background-color: #c99894;
+    color: black;
+  }
+}
+
+#canvas {
+  z-index: 3;
+}
+
+#canvas2 {
+  z-index: 2
+}
+
+#canvas3 {
+  z-index: 1;
+}
+
+#controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+#options {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+/*==========  EFFECTS  ==========*/
+.in {
+  transition: opacity 1s ease-in-out;
+  display: block !important;
+  opacity: 1;
+}
+
+.out {
+  transition: opacity 1.5s ease-out;
+  opacity: 0;
+}
+
+.slide-out {
+  transition: 0.3s ease-in;
+  left: -110%!important;
+}
